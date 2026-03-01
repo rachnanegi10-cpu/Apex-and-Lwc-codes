@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  title="Find your zodiac match">
+        <lightning-input class="slds-m-around_medium" value={userName} onchange={handleNameChange} label="Enter Name"></lightning-input>
+        <lightning-input class="slds-m-around_medium" value={userBirthdate} onchange={handleDateChange} type="date" label="Enter Date of birth"></lightning-input>
+        <lightning-button variant="brand" label="Hit it" title="Hit it" onclick={handleSubmit} class="slds-align_absolute-center slds-m-left_x-small "></lightning-button>
+
+    </lightning-card>
+    
+</template>

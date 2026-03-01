@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Calculator" icon-name="utility:calculator">
+        <div style="color:burlywood;background-color:azure;width:400px;height:200px">
+          
+            <lightning-input value={f1} label="Number a" placeholder="1st Number" onchange={fno}>
+            </lightning-input>
+            
+            
+            <lightning-input label="Number b" placeholder="2nd Number" value={f2} onchange={sno}>
+            </lightning-input>
+            <lightning-button label="+" onclick={add}></lightning-button>
+            <lightning-button label="-" onclick={sub}></lightning-button>
+            <lightning-button label="*" onclick={mul}></lightning-button>
+            <lightning-button label="/" onclick={div}></lightning-button>
+            <lightning-button label="Clear" onclick={clear}></lightning-button>
+        </div>
+        <div>
+            <h1 style="color: black; background-color:rgb(60, 197, 32)">
+                <b>Show result: {res}</b>
+            </h1>
+        </div>
+    </lightning-card>
+    
+</template>

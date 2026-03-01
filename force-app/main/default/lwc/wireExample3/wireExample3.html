@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Show account with contact" icon-name="standard:account">
+        <div class="slds=box" style="color:red;background-color:rgb(179, 179, 133);">
+            <template if:true={Account2}>
+                <template for:each={Account2} for:item="acc">
+                    <div key={acc.id} class="slds=box">
+                        <strong>Account Name: {acc.Name}</strong>
+                        <ul style="color:blue;border:5px blue;">
+                            <template for:each={acc.Contacts} for:item="con">
+                              <li key={con.id}>
+                                Contact Name:{con.Name} 
+                                Phone:{con.phone}
+                              </li>
+                            </template>
+                        </ul>
+                    </div>
+
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

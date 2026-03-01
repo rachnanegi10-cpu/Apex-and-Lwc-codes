@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Show all name" icon-name="custom:custom6">
+        <div class="slds-box">
+            <template iterator:it={contacts1}>
+                <li key={it.values.no}>
+                    <template if:true={it.first}>
+                         Number of contact is:{it.value.no}
+                         Name:{it.value.name}
+                         Title:{it.value.title}
+
+                    </template>
+                    <template if:true={it.last}>
+                         Number of contact is:{it.value.no}
+                         Name:{it.value.name}
+                         Title:{it.value.title}  
+                    </template>
+                </li>
+            </template>
+        </div>
+    </lightning-card>
+
+    
+</template>

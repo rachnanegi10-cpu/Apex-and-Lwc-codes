@@ -1,0 +1,18 @@
+<template>
+<lightning-card 
+    title="Program on checkbox using conditional template"
+    icon-name="custom:custom6">
+    <h1> When User Click Order</h1>
+    <div class="sldsbox1">
+    <lightning-input type="checkbox" label="Order Placed Successfully" onchange={onclick}></lightning-input>
+    <hr/>
+    <template if:true={showres}>
+        order places Successfully.
+    </template>
+</div>
+
+<template if:false={showres}>
+    <h1>Please Click to place an order</h1>
+</template>
+</lightning-card>    
+</template>

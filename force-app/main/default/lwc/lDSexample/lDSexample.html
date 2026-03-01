@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Example of LDS" icon-name="standard:account">
+        click on button to save the record!
+        <lightning-button label="Click to Save" onclick={hclick}></lightning-button>
+        <template lwc:if={showres}>
+            <div class="slds-box" style="color:green;background-color:azure;border:5px solid blue">
+                <lightning-record-form object-api-name="Account" layout-type="Compact" columns="2"></lightning-record-form>
+
+        <!--<div class="slds-box" style="color:green;background-color:azure;border:5px solid blue">
+            <lightning-record-form object-api-name={objectApiName} record-id={recordId} fields={field1} layout-type="Full">
+                <lightning-record-form object-api-name={objectApiName} record-id={recordId} fields={field1} columns="2"></lightning-record-form>
+            
+        </div>-->
+        </div>
+        </template>
+
+    </lightning-card>
+
+    <!--Lightning Record form -->
+
+    <lightning-card title="Example of Lightning record view form" icon-name="standard:account">
+        <div class="slds-box" style="color:green;background-color:azure;border:5px solid blue">
+            <lightning-record-view-form object-api-name={objectApiName} record-id={recordId}>
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Type"></lightning-output-field>
+                <lightning-output-field field-name="Company"></lightning-output-field>
+                <lightning-output-field field-name="Rating"></lightning-output-field>
+
+            </lightning-record-view-form>
+        </div>
+
+    </lightning-card>
+
+    <!--Lightning Record edit form -->
+
+    <lightning-card title="Example of Lightning record edit form" icon-name="standard:account">
+        <div class="slds-box" style="color:green;background-color:azure;border:5px solid blue">
+            <lightning-record-edit-form object-api-name="Account" record-id={recordId} onsuccess={hsubmit}>
+                <lightning-input-field field-name={N1}></lightning-input-field>
+                <lightning-input-field field-name={T1}></lightning-input-field>
+                <lightning-input-field field-name={I1}></lightning-input-field>
+                <lightning-input-field field-name={R1}></lightning-input-field>
+
+                <div style="color:red;background-color:yellow;">
+                    <lightning-button label="Click to Save" type="submit" variant="success"></lightning-button>
+                    <strong> Record Id : {acid} </strong>
+                
+                </div>
+
+            </lightning-record-edit-form>
+        </div>
+
+    </lightning-card>
+    
+</template>

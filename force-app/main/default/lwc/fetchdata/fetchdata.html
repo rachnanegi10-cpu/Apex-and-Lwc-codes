@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Show all account details " icon-name="custom:custom13">
+        <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer">
+            <thead>
+                <tr>
+                    <th class="slds-text-align_left" scope="col">
+                        <div class="slds-truncate" title="Account Name">Name</div>
+                    </th>
+                    <th class="slds-text-align_left" scope="col">
+                        <div class="slds-truncate" title="Account Type">Type</div>
+                    </th>
+                    <th class="slds-text-align_left" scope="col">
+                        <div class="slds-truncate" title="Account Rating">Rating</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={Account1} for:item="acc">
+                    <tr key={acc.Id}>
+                        <td data-label="Account Name">
+                            <div class="slds-truncate">{acc.Name}</div>
+                        </td>
+                        <td data-label="Account Type">
+                            <div class="slds-truncate">{acc.Type}</div>
+                        </td>
+                        <td data-label="Account Rating">
+                            <div class="slds-truncate">{acc.Rating}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

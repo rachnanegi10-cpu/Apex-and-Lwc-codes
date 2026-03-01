@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Show Account Data" icon-name="standard:account">
+        <lightning-button label="Show Data" onclick={cclick} variant="success"></lightning-button>
+
+        <div style="width: fit-content;">
+            <template if:true={aclist}>
+                <lightning-datatable key-field="Id" data={aclist} columns={columns1} onrowselection={hselect}></lightning-datatable>
+                <template if:true={selectedAccountId}>
+                    <c-childcompdata accountid={selectedAccountId}></c-childcompdata>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

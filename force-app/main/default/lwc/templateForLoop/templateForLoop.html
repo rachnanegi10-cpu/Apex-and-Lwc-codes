@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="show all name" icon-name="custom:custom1">
+      <h1 style="color:blue; text-align:center;">
+                <b>
+                    Show me Company name :{c1}
+                    <img src={imgLogo} alt="No Image" width="50" height="50"></img>
+                </b>
+            </h1>
+
+
+    <div class="slds-box">
+      <img src="https://saleforce-3f3-dev-ed--c.develop.vf.force.com/resource/1757493741000/Mobile"
+        width="70" height="70"></img>
+        <template for:each={contacts1} for:item="con1" for:index="conindex">
+            <li key={con1.no}>
+                Index of contact is:{conindex}<br/>
+                Number of contact:{con1.no}<br/>
+                Name:{con1.name}<br/>
+                Title:{con1.title}
+            </li>
+        </template>
+    </div>
+
+</lightning-card>
+</template>

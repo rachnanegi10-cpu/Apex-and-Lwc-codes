@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="This is Parent component" icon-name="custom:custom10">
+        <lightning-input label="Enter value" onchange={click}></lightning-input>
+        <h1>This is parent component calling child</h1>
+       <!--<lightning-button label="Show parent value" onclick={hclick}></lightning-button>-->
+       <lightning-button label="Call parent parameter" onclick={hmethod}></lightning-button>
+        <c-child-component pval={sendVal}></c-child-component>
+    </lightning-card>
+    
+</template>

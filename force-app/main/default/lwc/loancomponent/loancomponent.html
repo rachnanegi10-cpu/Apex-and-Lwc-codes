@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Loan interest calculator" icon-name="custom:custom8">
+        <div style="color: rgb(39, 38, 38);background-color:floralwhite;width:400px;height:200px">
+        <lightning-input label="Amount" placeholder="Enter the amount" onchange={amount}></lightning-input>
+        <lightning-input label="Term" placeholder="Term" onchange={term}></lightning-input>
+        <lightning-input type="Checkbox" label="Female" onchange={handleCheck}></lightning-input>
+        
+
+        
+        <lightning-button label="Calculate" onclick={calculate}></lightning-button>
+
+        
+        </div>
+        <template if:true={showres}>
+        <h1>
+            <b>Loan amount for {term1} years is {repay}</b>
+            
+        </h1>
+        <h1><b>intrest rate is : {rate2}%</b>
+        </h1>
+
+        </template>
+        <template if:false={showres}>
+            <h1>
+            <b>Loan amount for {term1} years is {repay}</b>
+            
+        </h1>
+        <h1><b>intrest rate is : {rate1}%</b>
+        </h1>
+
+        </template>
+    </lightning-card>
+    
+</template>

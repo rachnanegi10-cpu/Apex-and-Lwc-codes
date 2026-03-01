@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Show contact on click" icon-name="standard:account">
+        <div class="slds-box" style="color:red;background-color:rgb(179, 179, 133);">
+            <template for:each={Accounts1} for:item="acc">
+                <div key={acc.id} class="slds-box">
+                    <a onclick={hclick} data-id={acc.id}>{acc.Name}</a>
+                </div>
+                    </template>
+                        <template if:true={showacc}>
+                            <ul style="color:red;border:5px solid blue;">
+                                <template for:each={showacc.Contacts} for:item="con">
+                                    <li key={con.id}>
+                                        Contact Name : {con.Name} 
+                                        Contact Phone : {con.phone}
+                                    </li>
+
+                                </template>
+                            </ul>
+                        </template>    
+               
+            
+                        <template if:true={error}>
+                            <b>No Data</b>
+                        </template>
+        </div>
+    </lightning-card>
+    
+</template>

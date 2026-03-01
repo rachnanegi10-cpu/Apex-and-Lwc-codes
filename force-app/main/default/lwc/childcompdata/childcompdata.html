@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Show all contacts" icon-name="standard:contact">
+        <div style="border:10px solid blue;color:red;">
+            <template for:each={contact1} for:item="con">
+                <div key={con.Id}>
+                    <b>
+                        Contact FirstName: {con.FirstName}
+                        Contact LastName: {con.LastName}
+                        Contact Email: {con.Email}
+                    </b>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

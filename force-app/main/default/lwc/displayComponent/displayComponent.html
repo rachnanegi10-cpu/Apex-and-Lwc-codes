@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Show Account" icon-name="Statndard:Account">
+        <lightning-button style="color:aquamarine" label="Show Account" onclick={click}></lightning-button>
+         <lightning-button style="color:blue" label="Clear Account" onclick={cclick}></lightning-button>
+        <div class="slds-box" style="color:blue; background-color:bisque">
+            <template for:each={Account1} for:item="acc">
+                <div key={acc.id}>
+                    <div class="slds-box">
+                        Account Name : {acc.Name}
+                        Account Type : {acc.Type}
+                        Account Industry : {acc.Industry}
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

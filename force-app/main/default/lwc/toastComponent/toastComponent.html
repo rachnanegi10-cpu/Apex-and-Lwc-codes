@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="My new component" style="color: aquamarine; background-color:biscus">
+        <h1><b>This component show alert message</b></h1>
+        <lightning-button label="Show toast" variant="destructive" onclick={Toast1}></lightning-button>
+
+        <h1 style="color:aquamarine">
+            Program for adding numbers.
+        </h1>
+        <h1 style="color: blue;">
+            <b>Result : {res} </b>
+        </h1>
+        <lightning-input title="number1" placeholder="Num" onchange={fno}></lightning-input> 
+        <lightning-input title="number2" placeholder="Num" onchange={sno}></lightning-input> 
+        <lightning-button-menu label="calc for numbers" alternative-text="calculating numbers"
+         icon-name="utility:activity" onselect={menus1}>
+            <lightning-button label="Add numbers" value="Add" onclick={addc}></lightning-button>
+            <lightning-button label="subtract numbers"  value="Minus" onclick={minus}></lightning-button>
+            <lightning-button label="clear numbers" value="Clear" onclick={clear}></lightning-button>
+        </lightning-button-menu>
+        
+    </lightning-card>
+</template>

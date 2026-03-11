@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Related Opportunity" icon-name="standard:opportunity">
+        
+            <lightning-datatable if:true={opps.data}
+                key-field="Id"
+                data={opps.data}
+                columns={columns}>
+            </lightning-datatable>
+        
+        <!--<p> Contact Data for Account Id : {accId}</p>-->
+    </lightning-card>
+    
+</template>

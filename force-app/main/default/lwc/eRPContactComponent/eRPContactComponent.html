@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Related Contacts" icon-name="standard:contact">
+        
+            <lightning-datatable if:true={contacts.data}
+                key-field="id"
+                data={contacts.data}
+                columns={columns}>
+            </lightning-datatable>
+        
+        <!--<p> Contact Data for Account Id : {accId}</p>-->
+    </lightning-card>
+
+    
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Account Builder" icon-name="standard:account">
+        <lightning-record-form
+            object-api-name="Account"
+            mode="edit"
+            fields={fields}
+            >
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Contact Builder" icon-name="standard:contact">
+        <lightning-record-form
+            object-api-name="Contact"
+            mode="edit"
+            fields={fieldsContact}
+            >
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Opportunity Builder" icon-name="standard:opportunity">
+        <lightning-record-form
+            object-api-name="Opportunity"
+            mode="edit"
+            fields={fieldsOpportunity}
+            >
+        </lightning-record-form>
+    </lightning-card>
+    
+</template>

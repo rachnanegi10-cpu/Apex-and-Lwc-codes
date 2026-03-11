@@ -1,6 +1,7 @@
 <template>
     <lightning-card>
         <div class="slds-p-around_medium">
+
                 <lightning-record-picker 
                     label="Select Account"
                     placeholder="Search Account"
@@ -10,12 +11,25 @@
                 >
                 </lightning-record-picker>
                 <template if:true={contacts}>
-                    <lightning-datatable 
-                        key-field="Id"
-                        data={contacts}
-                        columns={columns}
-                        >
-                    </lightning-datatable>
+                    <lightning-card title="Contacts" icon-name="standard:contact">
+                            <lightning-datatable 
+                                key-field="Id"
+                                data={contacts}
+                                columns={columns}
+                                >
+                            </lightning-datatable>
+                    </lightning-card>
+               </template>
+
+               <template if:true={opps}>
+                    <lightning-card title="Opportunity" icon-name="standard:opportunity">
+                        <lightning-datatable 
+                            key-field="Id"
+                            data={opps}
+                            columns={columns2}
+                            >
+                        </lightning-datatable>
+                    </lightning-card>
                </template>
 
                <template if:true={error}>

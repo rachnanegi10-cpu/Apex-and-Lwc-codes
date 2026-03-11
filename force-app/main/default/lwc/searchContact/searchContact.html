@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+                <lightning-record-picker 
+                    label="Select Account"
+                    placeholder="Search Account"
+                    object-api-name="Account"
+                    onchange={handleAccountChange}
+                    class="slds-m-bottom_medium"
+                >
+                </lightning-record-picker>
+                <template if:true={contacts}>
+                    <lightning-datatable 
+                        key-field="Id"
+                        data={contacts}
+                        columns={columns}
+                        >
+                    </lightning-datatable>
+               </template>
+
+               <template if:true={error}>
+                    <p class="slds-text-color_error">Error loading contacts.</p>
+                </template>
+        </div>
+
+
+    </lightning-card>
+    
+</template>
